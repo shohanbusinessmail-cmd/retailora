@@ -1,0 +1,9 @@
+<Application x:Class="Dokanora.Desktop.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="TextPrimary" Color="#1B302F" />
+        <SolidColorBrush x:Key="Accent" Color="#176B60" />
+    </Application.Resources>
+</Application>

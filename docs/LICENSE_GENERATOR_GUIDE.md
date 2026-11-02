@@ -1,0 +1,3 @@
+# Owner-only generator
+
+Not implemented or packaged. No signing key has been created. The future tool must import activation requests, authenticate the operator, access a separately protected signing key and issue auditable signed licenses without requiring Internet access. Key setup, backup, recovery, transfer and rotation instructions must be validated with the implemented tool before delivery. Never publish the generator in customer releases or place keys in source, logs or CI. This repository is presently public; owner-only source confidentiality requires the owner to reconsider its visibility.

@@ -1,0 +1,5 @@
+# Backup and restore design — unavailable in this build
+
+Do not use this software to store business data. A future backup implementation must use SQLite's online backup API to capture a consistent snapshot including committed WAL contents, and separately include required local attachments and versioned metadata. Verify the completed artifact using integrity and foreign-key checks plus a manifest and restore tests; protect private data and store outside the application installation directory. Scheduling, retention, optional encryption and destination handling must not erase the only valid backup.
+
+A restore must authorize the user, confirm destructive replacement, validate compatibility and snapshot integrity, create and verify an emergency backup, close all connections, stage/replace safely, run integrity checks and reopen or recover without silently creating empty data. Define file replacement, interruption and rollback procedures on Windows and test them before enabling restoration. Backups must not carry private signing keys. This document is not an operational recovery procedure: the feature does not yet exist.

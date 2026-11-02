@@ -1,0 +1,7 @@
+# Naming research — 2026-11-02
+
+Working identity: **Dokanora / দোকানোরা**, a coined name combining a familiar Bengali retail root with a distinctive ending. It is used consistently in this early foundation, but is **not legally cleared or final for commercial use**.
+
+Searches performed: general web searches for `"Dokanora" software retail Bangladesh` and `"Dokanora" দোকান সফটওয়্যার retail pos`; GitHub repository API search for `dokanora` returned zero repositories at the time of the search. Search results do not establish absence of use. Google-specific search and domain registration/availability were not verified in this environment.
+
+Potential confusion: Bangladesh POS products [DokanE](https://dokanepos.com/fashion-house/), [Dokani](https://dokani.cloud/), and [Dokandar POS](https://dokandarpos.com/) share a familiar root; [DokanOS](https://github.com/razikuljoni/DokanOS) is a GitHub POS project. This creates material naming risk, and a local trademark and business-name search plus domain and app-store checks are required before branding or selling. Alternatives researched were rejected: [Ponnobithi](https://www.mawbiz.com.bd/ponnobithi_2) is a business name; [Bikroyik](https://www.bikroyik.com/) is an existing POS brand; [Halkhata](https://halkhata.net/) is an existing POS brand. The repository name Retailora is also not proof of brand availability; [Retailo POS](https://apps.microsoft.com/detail/9n221g1lsfhn?hl=en-US&gl=US) is similarly named. These searches are preliminary, not legal advice or a trademark clearance.

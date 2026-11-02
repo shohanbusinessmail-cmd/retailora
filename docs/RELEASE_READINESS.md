@@ -1,0 +1,3 @@
+# Release readiness
+
+**BLOCKED. Do not release or use for real business records.** No completed transactional modules, security/authentication, backup/restore, licensing, installer or acceptance testing. No tag-triggered release pipeline exists. CI only builds a development window and runs domain smoke tests; a pass cannot approve a release. Verify all functional, financial, database, security, offline, UI, Windows installer/upgrade/uninstall and release gates requested by the owner, including evidence of actual Windows tests, before changing this status. Windows code signing requires the owner's legitimate certificate and secure workflow; currently unsigned.

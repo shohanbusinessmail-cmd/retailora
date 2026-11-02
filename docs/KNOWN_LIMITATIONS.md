@@ -1,0 +1,3 @@
+# Known limitations
+
+This repository is an early development starting point. The window is a warning, not an operational POS. All business operations, persistent storage, migration, authentication, accounting integration, licensing, backup/restore, printing, exports, installer, update and release systems remain unimplemented. Domain helpers are not integrated into any real transaction. The public repository, preliminary branding, absent font licensing review, absent Windows/SDK execution and unreviewed planned dependencies prevent commercial use. The documentation describes intended designs, not completed features. Never place production records in this version.

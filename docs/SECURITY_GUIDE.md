@@ -1,0 +1,3 @@
+# Security design notes
+
+Future authentication requires a reviewed password hashing algorithm and parameters, per-user salt, throttling, role authorization in application services, session lock and audit. Use safe parameterized queries and strict validation. Local administrators may access local data; OS permissions and optional backup encryption reduce exposure but are not a substitute for full-disk encryption. Restrict sensitive logs; do not log passwords, keys or unneeded personal information. Review crash handling, file paths, dependencies and Windows key storage before production. All these controls are pending, not guarantees of the current shell. See `LICENSE_ARCHITECTURE.md` for offline licensing limitations.

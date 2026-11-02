@@ -1,0 +1,16 @@
+# Business workflows — design contracts, not implemented
+
+## Posting lifecycle
+Draft data can be edited without journal or stock impact. Posting requires an authorized active user, validated immutable snapshot, deterministic totals and unique idempotency token plus payload hash. Within a single SQLite write transaction re-read current stock and outstanding balances, reject invalid inputs, write document/lines, stock movements and updated stock projection, payment/allocation, journal/lines and audit event; check invariants and commit. On any error roll back all effects. Repeat with the same token and hash returns the previously committed result; the same token with a different hash fails. Concurrent writers cannot bypass stock or return limits. Print and export occur after commit and must not trigger a new transaction.
+
+## Sale and settlement
+Require positive representable quantities, active products, nonnegative prices, permitted discounts and valid tax configuration. Calculate line gross, line discounts, allocated overall discounts, taxable base and tax in a deterministic order. Discounts cannot exceed their applicable base. Payments cannot exceed the payable without explicit customer-advance handling. Walk-in sale requires full payment; credit must identify a customer. Preserve original cost per sale line. Settlement is a separate payment with optional allocations across invoices, bounded by outstanding amounts; unallocated customer advance is a liability, not negative sales revenue. Cash drawer reconciliation is distinct from revenue.
+
+## Purchases and returns
+A posted purchase records supplier, exact stock received, landed cost and payables/payment atomically. Additional cost allocation and tax treatment need formal, tested policy. Returns must reference eligible original lines and cannot exceed the original quantity less earlier posted returns; check under the same write transaction. Preserve originals, record reasons and correction links; distinguish refund, payable/receivable adjustment and advance. Sales returns explicitly choose resaleable or damaged disposition. Do not automatically restock damaged goods. A canceled document must be reversed with offsetting stock and balanced journals, not deleted or rewritten.
+
+## Dashboard and reports
+All metrics query posted source data or reconcilable projections, never mock values. 'Today's sales' is net sales within the selected Bangladesh business-day interval, not collections; today's payments include collections of older receivables and should be classified by direction and method. Customer receivables include prior open balances and allocations; today's credit sales are new unpaid amounts only. Profit uses original COGS, returns and classified expenses, not current product prices or total purchases. Date interval uses an inclusive start and exclusive end in Bangladesh local time converted to UTC. Definitions must be finalized with tests before release.
+
+## Pending specifications
+Specify exact tax and discount allocation, quantity/price precision bounds, partial return cost residuals, void permissions and period closing, cash drawer model, supplier credit allocation and historical schema. No feature above is presently available.

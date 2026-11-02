@@ -1,0 +1,19 @@
+name: Windows foundation CI
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build-and-smoke-test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Build desktop
+        run: dotnet build src/Dokanora.Desktop/Dokanora.Desktop.csproj --configuration Release
+      - name: Run domain smoke tests
+        run: dotnet run --project tests/Dokanora.Domain.Tests/Dokanora.Domain.Tests.csproj --configuration Release

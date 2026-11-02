@@ -1,0 +1,3 @@
+# Developer guide
+
+Install a supported .NET 10 SDK on Windows. Build and run commands are in the root README. No local runtime, package restore or Windows build was available in the initial environment. The domain is framework independent; keep the UI thin. `tests/Dokanora.Domain.Tests` is a console smoke-test runner and must exit nonzero on failure. It does not register with `dotnet test`, and is not a complete testing framework. CI calls it with `dotnet run`. No production database or secrets should be used. Keep dependencies pinned/reviewed once added, and validate migrations on copies of synthetic databases.

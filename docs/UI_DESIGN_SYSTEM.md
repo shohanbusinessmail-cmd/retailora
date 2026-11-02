@@ -1,0 +1,5 @@
+# UI design system — first draft
+
+Light only. Background #F7FAF8, surface white, primary #176B60, text #1B302F, border #DCE8E3. Preserve contrast, focus indication and keyboard access in every control; validate against WCAG contrast with actual text sizes. Base spacing 4/8/16/24/32 px; consistent forms, table density, clear validation and non-destructive defaults. No decorative fake metrics or navigation to unfinished modules.
+
+Primary language is natural Bangladeshi Bengali. Use বিক্রয়, পণ্য ক্রয়, বাকি আদায়, ব্যবসায়িক খরচ. Dates default DD-MM-YYYY; currency BDT/৳. User-facing dates and business-day boundaries use Bangladesh time; store UTC. Do not force Bengali numerals for data entry. The shell uses a Windows font fallback only; a redistributable font and actual Bengali WPF/PDF/receipt shaping tests are still required. Original editable storefront/ledger icon source: `assets/branding/dokanora.svg`, and ICO sizes 16–256 are included. Review branding and rendering on Windows before use.

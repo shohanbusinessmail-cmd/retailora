@@ -1,0 +1,3 @@
+# Release guide
+
+No release workflow or installer exists. Do not create tags or publish a customer release while release readiness is blocked. Before automation, establish mandatory financial/security/data-loss gates, reproducible self-contained Windows x64 publishing, package-content checks excluding generator and keys, checksums, notes, clean install/upgrade/uninstall tests and permission-scoped release credentials. Owner-only generator packaging must be separate, and keys must never enter CI. Signing is optional only with honest unsigned disclosure; certificate ownership and secure handling must be verified.
